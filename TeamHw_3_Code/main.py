@@ -16,6 +16,8 @@ def result():
       result['Gender'] = request.form.get('Gender')
       # 학과
       checklist = request.form.getlist('mycheckbox')
+      result['languages'] = ", ".join(checklist)
+
 
       return render_template("result.html",result = result)
 
