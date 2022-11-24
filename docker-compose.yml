@@ -1,7 +1,14 @@
 version: '3.0'
 
 services:
-  nginx-app:
-    build: .
+  web:
+    build: ./test .
+      
+    image: ${DOCKER_USER_ID}/hw6
+
+  production:
+
+    image: ${DOCKER_USER_ID}/hw6:${BUILD_NUMBER}
+    restart: always
     ports:
       - "80:80"
