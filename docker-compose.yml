@@ -1,7 +1,7 @@
 version: '3.0'
 
 services:
-  web:
+  TBO:
     build: ./test .
       
     image: ${DOCKER_USER_ID}/hw6
